@@ -1,0 +1,6 @@
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\bin\Debug\ServerMods.dll
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\bin\Debug\ServerMods.pdb
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\obj\Debug\ServerMods.csproj.AssemblyReference.cache
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\obj\Debug\ServerMods.csproj.CoreCompileInputs.cache
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\obj\Debug\ServerMods.dll
+C:\Users\VSP\Documents\Repos\ValheimMods\ServerMods\obj\Debug\ServerMods.pdb

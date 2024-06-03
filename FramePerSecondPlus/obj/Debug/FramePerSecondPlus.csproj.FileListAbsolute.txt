@@ -1,0 +1,6 @@
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\bin\Debug\FramePerSecondPlus.dll
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\bin\Debug\FramePerSecondPlus.pdb
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\obj\Debug\FramePerSecondPlus.csproj.AssemblyReference.cache
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\obj\Debug\FramePerSecondPlus.csproj.CoreCompileInputs.cache
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\obj\Debug\FramePerSecondPlus.dll
+C:\Users\VSP\Documents\Repos\ValheimMods\FramePerSecondPlus\obj\Debug\FramePerSecondPlus.pdb

@@ -16,9 +16,8 @@ namespace FramePerSecondPlus
     [BepInPlugin("vsp.FramePerSecondPlus", "FramePerSecondPlus", "1.4.0")]
     public class FramePerSecondPlus : BaseUnityPlugin
     {
-        //private static Thread thread;
         private static ManualLogSource Log;
-        string[] names = new string[] { /*"CastleKit_groundtorch", "CastleKit_groundtorch_blue", "CastleKit_groundtorch_green", "CastleKit_groundtorch_unlit", "CastleKit_metal_groundtorch_unlit",*/ "piece_groundtorch", "piece_groundtorch_blue", "piece_groundtorch_green", "piece_groundtorch_mist", "piece_groundtorch_wood", "piece_walltorch"/*, "piece_brazierfloor01", "piece_brazierfloor02" */};
+        string[] PrefabLightNames = new string[] { /*"CastleKit_groundtorch", "CastleKit_groundtorch_blue", "CastleKit_groundtorch_green", "CastleKit_groundtorch_unlit", "CastleKit_metal_groundtorch_unlit",*/ "piece_groundtorch", "piece_groundtorch_blue", "piece_groundtorch_green", "piece_groundtorch_mist", "piece_groundtorch_wood", "piece_walltorch"/*, "piece_brazierfloor01", "piece_brazierfloor02" */};
 
         private static ConfigEntry<bool> skipIntro;
         ConfigEntry<T> config<T>(string group, string name, T value, ConfigDescription description)
@@ -26,27 +25,27 @@ namespace FramePerSecondPlus
             ConfigEntry<T> configEntry = Config.Bind(group, name, value, description);
             return configEntry;
         }
-        private void ConfigAdd()
+        private void AddConfiguration()
         {
             skipIntro = config<bool>("General", "SkipIntro", true, new ConfigDescription("Skip the game logo to speed up the loading of the game"));
         }
         void Awake()
         {
             FramePerSecondPlus.Log = base.Logger;
-            ConfigAdd();
+            AddConfiguration();
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
             QualitySettings.realtimeReflectionProbes = false;
             QualitySettings.softParticles = false;
             QualitySettings.particleRaycastBudget = 1024;
             QualitySettings.softVegetation = false;
-            PrefabManager.OnPrefabsRegistered += Awk;
+            PrefabManager.OnPrefabsRegistered += CustomAwake;
         }
-        void Awk()
+        void CustomAwake()
         {
-            for (int i = 0; i < names.Length; i++)
-                Torch(PrefabManager.Instance.GetPrefab(names[i]));
+            for (int i = 0; i < PrefabLightNames.Length; i++)
+                TorchParticles(PrefabManager.Instance.GetPrefab(PrefabLightNames[i]));
         }
-        void Torch(GameObject gameObject)
+        void TorchParticles(GameObject gameObject)
         {
 
             string childName = "fx_Torch_Basic";
@@ -71,6 +70,7 @@ namespace FramePerSecondPlus
                 __instance.m_grassPatchSize = 20;
             }
         }
+        //Настройка прорисовки травы. Удалить со следующим патчем 1.4+
         /*
         [HarmonyPatch(typeof(Terminal), "InputText")]
         private static class InputText_Patch
@@ -146,44 +146,6 @@ namespace FramePerSecondPlus
                 __instance._showLogos = !skipIntro.Value;
             }
         }
-        /*
-        [HarmonyPatch(typeof(SceneLoader), "LoadYourAsyncScene")]
-        private class SceneLoaderOff
-        {
-            private static IEnumerator Prefix(SceneLoader __instance)
-            {
-                ZLog.Log("Starting to load scene:" + __instance.m_scene);
-                UnityEngine.AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(__instance.m_scene, LoadSceneMode.Single);
-                asyncLoad.allowSceneActivation = false;
-
-                if (__instance._showLogos)
-                {
-                    UnityEngine.UI.Image componentInChildren = __instance.coffeeStainLogo.GetComponentInChildren<UnityEngine.UI.Image>();
-                    UnityEngine.UI.Image igImage = __instance.ironGateLogo.GetComponentInChildren<UnityEngine.UI.Image>();
-                    yield return __instance.FadeLogo(__instance.coffeeStainLogo, componentInChildren, 2f, __instance.alphaCurve, __instance.scalingCurve);
-                    __instance.coffeeStainLogo.SetActive(false);
-                    yield return __instance.FadeLogo(__instance.ironGateLogo, igImage, 2f, __instance.alphaCurve, __instance.scalingCurve);
-                    __instance.ironGateLogo.SetActive(false);
-                    igImage = null;
-                }
-                if (__instance._showSaveNotification)
-                {
-                    yield return __instance.ShowSaveNotification();
-                }
-                if (__instance._showHealthWarning)
-                {
-                    yield return __instance.ShowHealthWarning();
-                }
-                if (asyncLoad.progress < 0.9f)
-                {
-                    __instance.gameLogo.SetActive(true);
-                    yield return null;
-                }
-                asyncLoad.allowSceneActivation = true;
-                yield break;
-            }
-        }
-        */
         
         [HarmonyPatch(typeof(Smoke), "CustomUpdate")]
         private class SlowUpdaterFix

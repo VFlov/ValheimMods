@@ -29,7 +29,7 @@ namespace BigPieces
 
         ConfigEntry<T> config<T>(string group, string name, T value, string description, bool synchronizedSetting = true) => config(group, name, value, new ConfigDescription(description), synchronizedSetting);
 
-        private void ConfigAdd()
+        private void AddConfiguration()
         {
 
             serverConfigLocked = config<Toggle>("General", "Lock Configuration", Toggle.On, new ConfigDescription("If On, the configuration is locked and can be changed by server admins only. Value 'true' enable server sinc"), true);
@@ -41,7 +41,7 @@ namespace BigPieces
 
         private void Awake()
         {
-            ConfigAdd();
+            AddConfiguration();
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam;
             PrefabManager.OnVanillaPrefabsAvailable += WoodPole;
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam45;

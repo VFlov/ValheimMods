@@ -17,25 +17,25 @@ namespace DoubleClickPower
     [HarmonyPatch(typeof(Player), "StartGuardianPower")]
     public class InputPatch
     {
-        private static float clicktime = 0;
+        private static float SingleClickedTime = 0;
         private static bool Prefix()
         {
-            if (clicktime == 0)
+            if (SingleClickedTime == 0)
             {
-                clicktime = Time.time;
+                SingleClickedTime = Time.time;
                 return false;
             }
             else
             {
-                if (Time.time - clicktime < 0.5f)
+                if (Time.time - SingleClickedTime < 0.5f)
                 {
 
-                    clicktime = 0;
+                    SingleClickedTime = 0;
                     return true;
                 }
                 else
                 {
-                    clicktime = 0;
+                    SingleClickedTime = 0;
                     return false;
                 }
             }

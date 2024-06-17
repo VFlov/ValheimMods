@@ -4,7 +4,7 @@ using HarmonyLib;
 using System.Reflection;
 using ServerSync;
 
-
+//Ловит ошибки при атаке противника. Отследить
 namespace FastAndFairTerraforming
 {
     [BepInPlugin("vsp.FastAndFairTerraforming", "FastAndFairTerraforming", "1.1.0")]
@@ -15,8 +15,7 @@ namespace FastAndFairTerraforming
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
         }
-
-        //[HarmonyEmitIL]
+        
         [HarmonyPatch(typeof(CharacterAnimEvent), "CustomFixedUpdate")]
         private static class CharacterAnimEvent_Awake_Patch
         {
@@ -58,19 +57,6 @@ namespace FastAndFairTerraforming
                     __instance.m_attackStamina /= 2;
             }
         }
-        /*
-        [HarmonyPatch(typeof(Attack), "ProjectileAttackTriggered")]
-        private class Durability
-        {
-            private static void Prefix(Attack __instance)
-            {
-                if (__instance.m_character != Player.m_localPlayer)
-                    return;
-                if ((__instance.m_character as Humanoid).GetCurrentWeapon().m_dropPrefab.name == "PickaxeAntler")
-                    __instance.m_weapon.m_shared.m_useDurabilityDrain /= 2;
-            }
-        }
-        */
     }
 }
 

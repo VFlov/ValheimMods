@@ -7,7 +7,6 @@ using Jotunn.GUI;
 using UnityEngine.SceneManagement;
 using Jotunn.Utils;
 using BepInEx.Logging;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace ColorfulFlame
 {
@@ -27,13 +26,12 @@ namespace ColorfulFlame
         void Awake()
         {
             Class1.Log = base.Logger;
-
             material = AssetUtils.LoadAssetBundleFromResources("flamenew").LoadAsset<Material>("Assets/Material/flameball_flipbook.mat");
             Logger.LogInfo(material.name);
-            ConfigAdd();
-            InputAdd();
-
+            AddConfiguration();
+            InputButtonsAdd();
         }
+
         void Update()
         {
             if (ZInput.instance != null)
@@ -48,6 +46,7 @@ namespace ColorfulFlame
                 }
             }
         }
+
         static void FixColor()
         {
             Transform res = null;
@@ -65,18 +64,14 @@ namespace ColorfulFlame
                             res = hovered.transform.Find("_enabled/fx_Torch_Green");
                             if (res == null)
                             {
-                                //res = hovered.transform.Find("_enabled/demister_ball (1)");
                                 if (res == null)
                                     return;
-                                //var roundTorch = res.GetComponent<Material>();
-                                //roundTorch.SetColor("MainTex", choosedColor);
-                                //roundTorch.color = choosedColor;
-                                //return;
                             }
 
                         }
                     }
                 }
+                //Если не задействую в след обнове - удалить
                 /*
                 else if (hovered.name.Contains("brazier"))
                 {
@@ -104,14 +99,14 @@ namespace ColorfulFlame
             particleSystem.material = material;
             particleSystem.material.color = choosedColor;
         }
-        void ConfigAdd()
-
+        void AddConfiguration()
         {
             Config.SaveOnConfigSet = false;
             KeyConfig = Config.Bind("General", "KeyCode", KeyCode.F3, new ConfigDescription("The key for displaying the menu"));
             ShortcutConfig = Config.Bind("General", "Shortcut", new KeyboardShortcut(KeyCode.E, KeyCode.LeftShift), new ConfigDescription("Shortcut combination"));
         }
-        void InputAdd()
+
+        void InputButtonsAdd()
         {
             GuiVisible = new ButtonConfig
             {
@@ -152,9 +147,9 @@ namespace ColorfulFlame
                 false
                 );
                 GUIManager.BlockInput(true);
-
             }
         }
+
         public void SetColor(Color currentColor)
         {
             currentColor.a = 1f;

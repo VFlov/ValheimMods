@@ -8,11 +8,12 @@ using static LightFlicker;
 using BepInEx.Logging;
 using BepInEx.Configuration;
 using System.Runtime;
+using System.Threading;
 
 
 namespace FramePerSecondPlus
 {
-    [BepInPlugin("vsp.FramePerSecondPlus", "FramePerSecondPlus", "1.3.0")]
+    [BepInPlugin("vsp.FramePerSecondPlus", "FramePerSecondPlus", "1.4.0")]
     public class FramePerSecondPlus : BaseUnityPlugin
     {
         //private static Thread thread;
@@ -183,43 +184,41 @@ namespace FramePerSecondPlus
             }
         }
         */
-
+        
         [HarmonyPatch(typeof(Smoke), "CustomUpdate")]
         private class SlowUpdaterFix
         {
-            private static bool Prefix(Smoke __instance, float deltaTime)
+            private static bool Prefix(Smoke __instance, float deltaTime, float time)
             {
-                //ThreadPool.QueueUserWorkItem(state => OriginalMethod());
-                //__instance.m_alpha = Mathf.Clamp01(__instance.m_time);
-                __instance.m_time += deltaTime;
-                if (__instance.m_time > __instance.m_ttl && __instance.m_fadeTimer < 0f)
-                {
-                    __instance.StartFadeOut();
-                }
-                float num = 1f - Mathf.Clamp01(__instance.m_time / __instance.m_ttl);
-                __instance.m_body.mass = num * num;
-                Vector3 velocity = __instance.m_body.velocity;
-                Vector3 vel = __instance.m_vel;
-                //vel.y *= num;
-                Vector3 a = vel - velocity;
-                __instance.m_body.AddForce(a * __instance.m_force * deltaTime, ForceMode.VelocityChange);
-                if (__instance.m_fadeTimer >= 0f)
-                {
-                    __instance.m_fadeTimer += deltaTime;
-                    if (__instance.m_fadeTimer >= __instance.m_fadetime)
+                    __instance.m_alpha = Mathf.Clamp01(__instance.m_time);
+                    __instance.m_time += deltaTime;
+                    __instance.m_body.mass = 0.75f;
+                    Vector3 velocity = __instance.m_body.velocity;
+                    Vector3 vel = __instance.m_vel;
+                    vel.y *= 0.75f;
+                    Vector3 a = vel - velocity;
+                    __instance.m_body.AddForce(a * (__instance.m_force * deltaTime), ForceMode.VelocityChange);
+                    if (__instance.m_fadeTimer >= 0f)
                     {
-                        UnityEngine.Object.Destroy(__instance.gameObject);
+                        __instance.m_fadeTimer += deltaTime;
+                        __instance.m_alpha *= 0.5f;
+                        if (__instance.m_fadeTimer >= __instance.m_fadetime)
+                        {
+                            UnityEngine.Object.Destroy(__instance.gameObject);
+                        }
                     }
-                }
-                if (__instance.m_time <= 1f || __instance.m_fadeTimer > 0f)
-                {
-                    Color color = __instance.m_propertyBlock.GetColor(Smoke.m_colorProp);
-                    color.a = __instance.m_alpha;
-                    __instance.m_propertyBlock.SetColor(Smoke.m_colorProp, color);
-                    __instance.m_mr.SetPropertyBlock(__instance.m_propertyBlock);
-                }
+
+                    if (__instance.m_added)
+                    {
+                        Color color = __instance.m_propertyBlock.GetColor(Smoke.m_colorProp);
+                        color.a = __instance.m_alpha;
+                        __instance.m_propertyBlock.SetColor(Smoke.m_colorProp, color);
+                        __instance.m_mr.SetPropertyBlock(__instance.m_propertyBlock);
+                    }
                 return false;
             }
+                
         }
+        
     }
 }

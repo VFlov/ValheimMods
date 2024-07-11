@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using Marketplace;
+using Marketplace.Paths;
 using System;
 using System.Collections.Generic;
 using System.IO;

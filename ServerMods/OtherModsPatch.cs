@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Jotunn.Entities;
+using Marketplace.Modules.Quests;
+using AlmanacClasses.API;
 
 namespace ServerMods
 {
@@ -30,9 +32,10 @@ namespace ServerMods
             }
             for (int i = 0; i < quest.RewardCount.Length; i++)
             {
-                if (quest.RewardType[i] == 6)
+                if (quest.RewardType[i] == Quests_DataTypes.QuestRewardType.Cozyheim_EXP)
                 {
-                    API.AddExperience(quest.RewardCount[i]);
+
+                    AlmanacClasses.API.API.AddExperience(quest.RewardCount[i]);
                 }
             }
         }

@@ -7,6 +7,7 @@ using HarmonyLib;
 using Jotunn;
 using BepInEx;
 using Jotunn.Configs;
+using Marketplace;
 
 namespace ServerMods.ClientServer
 {

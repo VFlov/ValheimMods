@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 using Jotunn.Entities;
+using Marketplace.Modules.Quests;
 
 namespace ServerMods
 {

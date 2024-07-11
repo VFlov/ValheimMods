@@ -1,0 +1,2 @@
+C:\Users\VSP\Documents\GitHub\ValheimMods\ServerMods\obj\Release\ServerMod.csproj.AssemblyReference.cache
+C:\Users\VSP\Documents\GitHub\ValheimMods\ServerMods\obj\Release\ServerMod.csproj.CoreCompileInputs.cache

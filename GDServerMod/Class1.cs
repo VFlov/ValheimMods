@@ -22,14 +22,31 @@ namespace GDMod
         // Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
         public void Awake()
         {
-            PrefabManager.OnVanillaPrefabsAvailable += GDItems;
-            PrefabManager.OnVanillaPrefabsAvailable += CustomItems;
-            PrefabManager.OnVanillaPrefabsAvailable += WarfareItems;
-            PrefabManager.OnVanillaPrefabsAvailable += CustomMobs;
+           // items = AssetUtils.LoadAssetBundleFromResources("questitems");
+
+       
+           // fantasy = AssetUtils.LoadAssetBundleFromResources("FantasyArmoury", Assembly.GetExecutingAssembly());
+
+        
+           // henrik = AssetUtils.LoadAssetBundleFromResources("henrikstests", Assembly.GetExecutingAssembly());
+
+       
+           // magicbow = AssetUtils.LoadAssetBundleFromResources("MagicBows", Assembly.GetExecutingAssembly());
+
+    
+           // eikthyr = AssetUtils.LoadAssetBundleFromResources("eikthyrarmorset", Assembly.GetExecutingAssembly());
+
+     
+            //platearmor = AssetUtils.LoadAssetBundleFromResources("platearmor", Assembly.GetExecutingAssembly());
+            //PrefabManager.OnVanillaPrefabsAvailable += GDItems;
+            // PrefabManager.OnVanillaPrefabsAvailable += CustomItems;
+            //PrefabManager.OnVanillaPrefabsAvailable += WarfareItems;
+            //PrefabManager.OnVanillaPrefabsAvailable += CustomMobs;
             PrefabManager.OnVanillaPrefabsAvailable += Economy;
             //PrefabManager.OnVanillaPrefabsAvailable += this.CustomOre;
-            PrefabManager.OnVanillaPrefabsAvailable += CustomArmor;
-            this.ConfigShip();
+            //PrefabManager.OnVanillaPrefabsAvailable += CustomArmor;
+            //this.ConfigShip();
+
             Harmony harmony = Main.harmony;
             if (harmony != null)
             {
@@ -293,7 +310,7 @@ namespace GDMod
             GameObject gameObject13 = PrefabManager.Instance.CreateClonedPrefab("WoodCargo", "FineWood");
             GameObject gameObject14 = PrefabManager.Instance.CreateClonedPrefab("FoodCargo", "BarleyFlour");
             GameObject gameObject15 = PrefabManager.Instance.CreateClonedPrefab("PeltCargo", "DeerHide");
-            GameObject prefab = PrefabManager.Instance.GetPrefab("Coins");
+
             GameObject gameObject16 = PrefabManager.Instance.CreateClonedPrefab("PickaxeTerra", "PickaxeAntler");
             CustomItem customItem = new CustomItem(gameObject5, false);
             customItem.ItemDrop.m_itemData.m_shared.m_teleportable = false;
@@ -361,20 +378,7 @@ namespace GDMod
             customItem11.ItemDrop.m_itemData.m_shared.m_description = "Шкуры редких горных оленей. Согреют даже в самый хлад!";
             customItem11.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem11.ItemDrop.m_itemData.m_shared.m_weight = 25f;
-            new CustomItem(prefab, false)
-            {
-                ItemDrop =
-                {
-                    m_itemData =
-                    {
-                        m_shared =
-                        {
-                            m_weight = 0f,
-                            m_maxStackSize = 10000
-                        }
-                    }
-                }
-            }.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("Coins.png");
+
             CustomItem customItem12 = new CustomItem(gameObject16, false);
             customItem12.ItemDrop.m_itemData.m_shared.m_attackForce = 1f;
             customItem12.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("pickaxe.png");
@@ -1115,22 +1119,22 @@ namespace GDMod
         public static Harmony harmony = new Harmony("GrayDwarfMod");
 
         // Token: 0x04000005 RID: 5
-        public AssetBundle items = AssetUtils.LoadAssetBundleFromResources("questitems");
+        public AssetBundle items;
 
         // Token: 0x04000006 RID: 6
-        public AssetBundle fantasy = AssetUtils.LoadAssetBundleFromResources("FantasyArmoury", Assembly.GetExecutingAssembly());
+        public AssetBundle fantasy;
 
         // Token: 0x04000007 RID: 7
-        public AssetBundle henrik = AssetUtils.LoadAssetBundleFromResources("henrikstests", Assembly.GetExecutingAssembly());
+        public AssetBundle henrik;
 
         // Token: 0x04000008 RID: 8
-        public AssetBundle magicbow = AssetUtils.LoadAssetBundleFromResources("MagicBows", Assembly.GetExecutingAssembly());
+        public AssetBundle magicbow;
 
         // Token: 0x04000009 RID: 9
-        public AssetBundle eikthyr = AssetUtils.LoadAssetBundleFromResources("eikthyrarmorset", Assembly.GetExecutingAssembly());
+        public AssetBundle eikthyr;
 
         // Token: 0x0400000A RID: 10
-        public AssetBundle platearmor = AssetUtils.LoadAssetBundleFromResources("platearmor", Assembly.GetExecutingAssembly());
+        public AssetBundle platearmor;
 
         // Token: 0x0400000B RID: 11
         public Sprite TestSprite;
@@ -1355,6 +1359,22 @@ namespace GDMod
         }
         private void Economy()
         {
+            GameObject prefab = PrefabManager.Instance.GetPrefab("Coins");
+            new CustomItem(prefab, false)
+            {
+                ItemDrop =
+                {
+                    m_itemData =
+                    {
+                        m_shared =
+                        {
+                            m_weight = 0f,
+                            m_maxStackSize = 10000
+                        }
+                    }
+                }
+            }.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("./resources/gold.png");
+
             GameObject gameObject = PrefabManager.Instance.CreateClonedPrefab("GDCoin", "Ruby");
             gameObject.GetComponent<Renderer>().material.color = new Color(238, 130, 238);
             CustomItem customItem = new CustomItem(gameObject, false, new ItemConfig
@@ -1365,7 +1385,7 @@ namespace GDMod
             customItem.ItemDrop.m_itemData.m_shared.m_maxStackSize = 100000;
             customItem.ItemDrop.m_itemData.m_shared.m_weight = 0f;
             customItem.ItemDrop.m_itemData.m_shared.m_value = 10;
-            customItem.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("prem.png");
+            customItem.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("./resources/crystals.png");
             ItemManager.Instance.AddItem(customItem);
 
             GameObject gameObject2 = PrefabManager.Instance.CreateClonedPrefab("Wood2", "Wood");

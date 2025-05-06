@@ -16,6 +16,7 @@ namespace FramePerSecondPlus
     [BepInPlugin("vsp.FramePerSecondPlus", "FramePerSecondPlus", "1.4.0")]
     public class FramePerSecondPlus : BaseUnityPlugin
     {
+
         private static ManualLogSource Log;
         string[] PrefabLightNames = new string[] { /*"CastleKit_groundtorch", "CastleKit_groundtorch_blue", "CastleKit_groundtorch_green", "CastleKit_groundtorch_unlit", "CastleKit_metal_groundtorch_unlit",*/ "piece_groundtorch", "piece_groundtorch_blue", "piece_groundtorch_green", "piece_groundtorch_mist", "piece_groundtorch_wood", "piece_walltorch"/*, "piece_brazierfloor01", "piece_brazierfloor02" */};
 
@@ -152,31 +153,37 @@ namespace FramePerSecondPlus
         {
             private static bool Prefix(Smoke __instance, float deltaTime, float time)
             {
-                    __instance.m_alpha = Mathf.Clamp01(__instance.m_time);
-                    __instance.m_time += deltaTime;
-                    __instance.m_body.mass = 0.75f;
-                    Vector3 velocity = __instance.m_body.velocity;
-                    Vector3 vel = __instance.m_vel;
-                    vel.y *= 0.75f;
-                    Vector3 a = vel - velocity;
-                    __instance.m_body.AddForce(a * (__instance.m_force * deltaTime), ForceMode.VelocityChange);
-                    if (__instance.m_fadeTimer >= 0f)
-                    {
-                        __instance.m_fadeTimer += deltaTime;
-                        __instance.m_alpha *= 0.5f;
-                        if (__instance.m_fadeTimer >= __instance.m_fadetime)
-                        {
-                            UnityEngine.Object.Destroy(__instance.gameObject);
-                        }
-                    }
 
-                    if (__instance.m_added)
+                // Ранний выход, если объект в процессе удаления
+                if (__instance.m_fadeTimer >= 0f)
+                {
+                    __instance.m_fadeTimer += deltaTime;
+                    if (__instance.m_fadeTimer >= __instance.m_fadetime)
                     {
-                        Color color = __instance.m_propertyBlock.GetColor(Smoke.m_colorProp);
-                        color.a = __instance.m_alpha;
-                        __instance.m_propertyBlock.SetColor(Smoke.m_colorProp, color);
-                        __instance.m_mr.SetPropertyBlock(__instance.m_propertyBlock);
+                        UnityEngine.Object.Destroy(__instance.gameObject);
                     }
+                    return false; // Дальнейшие вычисления не нужны
+                }
+
+                __instance.m_time += deltaTime;
+
+                // Проверка на необходимость начать исчезновение
+                if (__instance.m_time > __instance.m_ttl)
+                {
+                    __instance.StartFadeOut();
+                    return false;
+                }
+
+                float num = 1f - (__instance.m_time / __instance.m_ttl); // Mathf.Clamp01 не нужен, если m_time гарантированно <= m_ttl
+                float mass = num * num;
+                __instance.m_body.mass = mass;
+
+                Vector3 velocity = __instance.m_body.velocity;
+                Vector3 vel = __instance.m_vel;
+                vel.y *= num;
+
+                Vector3 force = (vel - velocity) * (__instance.m_force * deltaTime);
+                __instance.m_body.AddForce(force, ForceMode.VelocityChange);
                 return false;
             }
                 

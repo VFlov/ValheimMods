@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,11 +82,11 @@
     <Reference Include="gui_framework">
       <HintPath>..\Dependencies\gui_framework.dll</HintPath>
     </Reference>
+    <Reference Include="ItemManager">
+      <HintPath>..\Dependencies\ItemManager.dll</HintPath>
+    </Reference>
     <Reference Include="Jotunn">
       <HintPath>..\Dependencies\Jotunn.dll</HintPath>
-    </Reference>
-    <Reference Include="kg.Marketplace">
-      <HintPath>..\Dependencies\kg.Marketplace.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Posix">
       <HintPath>..\Dependencies\Mono.Posix.dll</HintPath>
@@ -94,6 +96,12 @@
     </Reference>
     <Reference Include="Mono.WebBrowser">
       <HintPath>..\Dependencies\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerSync">
+      <HintPath>..\Dependencies\ServerSync.dll</HintPath>
+    </Reference>
+    <Reference Include="SkillManager">
+      <HintPath>..\Dependencies\SkillManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -339,6 +347,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils.cs" />
     <Compile Include="PrettyPotion.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Potion\IPotionBuilder.cs" />
@@ -347,30 +356,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\red.png">
+    <EmbeddedResource Include="resources\red.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\green.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\green.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\blue.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\blue.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\purple.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\purple.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\pink.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\pink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\basis.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\basis.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\yellow.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\yellow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="resources\orange.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\orange.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

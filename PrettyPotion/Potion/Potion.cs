@@ -8,7 +8,6 @@ namespace PrettyPotion
 {
     internal class Potion
     {
-        //Состав Бургера
         private bool _hasMushroom;
         private bool _hasYellowMushroom;
         private bool _hasYotunMushroom;

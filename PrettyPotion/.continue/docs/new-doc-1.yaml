@@ -1,0 +1,6 @@
+name: New doc
+version: 0.0.1
+schema: v1
+docs:
+  - name: Jotunn
+    startUrl: https://valheim-modding.github.io/Jotunn/api/Jotunn.html

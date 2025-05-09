@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using BepInEx;
 using Jotunn;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
 using Jotunn.Utils;
+using Mono.Mozilla;
 using UnityEngine;
 
 namespace WhiteMarble
 {
-    [BepInPlugin("vsp.WhiteMarble", "WhiteMarble", "1.2.0")]
+    [BepInPlugin("vaffle.WhiteMarble", "WhiteMarble", "1.2.0")]
     public class Class1 : BaseUnityPlugin
     {
         private void Awake()
@@ -333,6 +335,7 @@ namespace WhiteMarble
         // Token: 0x06000004 RID: 4 RVA: 0x00003298 File Offset: 0x00001498
         private void TextureFind()
         {
+            /*
             if (File.Exists(Path.Combine(Path.GetDirectoryName(base.Info.Location), "Marble.jpg")))
             {
                 Class1.whiteMarble = AssetUtils.LoadTexture(Path.Combine(Path.GetDirectoryName(base.Info.Location), "Marble.jpg"), true);
@@ -344,6 +347,27 @@ namespace WhiteMarble
                 return;
             }
             Class1.whiteMarble = AssetUtils.LoadAssetBundleFromResources("marbletex").LoadAsset<Texture2D>("Assets/whiteMarble.png");
+            */
+            Assembly assembly = Assembly.GetExecutingAssembly();
+
+            // Загружаем поток из внедренного ресурса
+            using (System.IO.Stream stream = assembly.GetManifestResourceStream("WhiteMarble.Resources.marble_tex.png"))
+            {
+                if (stream != null)
+                {
+                    // Читаем поток в массив байтов
+                    byte[] imageData = new byte[stream.Length];
+                    stream.Read(imageData, 0, (int)stream.Length);
+
+                    // Создаем Texture2D
+                    Texture2D texture = new Texture2D(2, 2);
+                    texture.LoadImage(imageData); // Автоматически распознает PNG/JPG
+
+                    // Применяем текстуру
+                    Class1.whiteMarble = texture;
+                    //GetComponent<Renderer>().material.mainTexture = texture;
+                }
+            }
         }
 
         // Token: 0x06000005 RID: 5 RVA: 0x0000334C File Offset: 0x0000154C

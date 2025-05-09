@@ -320,8 +320,6 @@ C:\Users\VFlov\Documents\GitHub\ValheimMods-main\FastAndFairTerraforming\obj\Deb
 C:\Users\VFlov\Documents\GitHub\ValheimMods-main\FastAndFairTerraforming\obj\Debug\FastAndF.CB917F6C.Up2Date
 C:\Users\VFlov\Documents\GitHub\ValheimMods-main\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.dll
 C:\Users\VFlov\Documents\GitHub\ValheimMods-main\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.pdb
-C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\FastAndFairTerraforming.dll
-C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\FastAndFairTerraforming.pdb
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\0Harmony.dll
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\assembly_googleanalytics.dll
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\assembly_guiutils.dll
@@ -426,5 +424,7 @@ C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\Sp
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.csproj.AssemblyReference.cache
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.csproj.CoreCompileInputs.cache
 C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\FastAndF.CB917F6C.Up2Date
-C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.dll
-C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\FastAndFairTerraforming.pdb
+C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\BetterAntlerPickaxe.dll
+C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\bin\Debug\BetterAntlerPickaxe.pdb
+C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\BetterAntlerPickaxe.dll
+C:\Users\VFlov\Documents\GitHub\ValheimMods\FastAndFairTerraforming\obj\Debug\BetterAntlerPickaxe.pdb

@@ -6,17 +6,16 @@ using Jotunn.Managers;
 using ServerSync;
 using System.Collections.Generic;
 using UnityEngine;
-using static CharacterAnimEvent;
-using static Player;
+
 
 namespace BigPieces
 {
-    [BepInPlugin("vsp.BigPieces", "BigPieces", "1.1.1")]
-    public class BigPieces : BaseUnityPlugin
+    [BepInPlugin("vaffle.BigPieces", "BigPieces", "1.0.0")]
+    public class Class1 : BaseUnityPlugin
     {
         private CustomLocalization Localization;
-
-        static readonly ConfigSync configSync = new ConfigSync("vsp.BigPieces") { DisplayName = "BigPieces", CurrentVersion = "1.1.1", MinimumRequiredVersion = "1.1.1" };
+        
+        static readonly ConfigSync configSync = new ConfigSync("vaffle.BigPieces") { DisplayName = "BigPieces", CurrentVersion = "1.0.0", MinimumRequiredVersion = "1.0.0" };
         ConfigEntry<T> config<T>(string group, string name, T value, ConfigDescription description, bool synchronizedSetting = true)
         {
             ConfigEntry<T> configEntry = Config.Bind(group, name, value, description);
@@ -37,12 +36,14 @@ namespace BigPieces
             costMultiplier = config<float>("Parameters", "Recipe cost multiplier", 1, new ConfigDescription("If the value is 1, the cost will correspond to the size of the piece. If you want to reward players for using big pieces, set the value to less than 1.", new AcceptableValueRange<float>(0, 10)), true);
 
         }
-
+        
 
         private void Awake()
         {
             AddConfiguration();
+            Jotunn.Logger.LogInfo("1");
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam;
+            Jotunn.Logger.LogInfo("2");
             PrefabManager.OnVanillaPrefabsAvailable += WoodPole;
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam45;
             PrefabManager.OnVanillaPrefabsAvailable += WoodFloor;
@@ -61,7 +62,9 @@ namespace BigPieces
             PrefabManager.OnVanillaPrefabsAvailable += BlackMarbleColumn2;
             PrefabManager.OnVanillaPrefabsAvailable += BlackMarbleColumn3;
             PrefabManager.OnVanillaPrefabsAvailable += CrystalWall;
+            Jotunn.Logger.LogInfo("3");
             AddLocalizations();
+            Jotunn.Logger.LogInfo("4");
         }
         private void WoodBeam()
         {

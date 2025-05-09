@@ -13,7 +13,7 @@ using System.Threading;
 
 namespace FramePerSecondPlus
 {
-    [BepInPlugin("vsp.FramePerSecondPlus", "FramePerSecondPlus", "1.4.0")]
+    [BepInPlugin("vaffle.FramePerSecondPlus", "FramePerSecondPlus", "1.4.0")]
     public class FramePerSecondPlus : BaseUnityPlugin
     {
 

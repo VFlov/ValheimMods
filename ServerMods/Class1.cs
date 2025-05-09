@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ServerMods
 {
-    [BepInPlugin("vsp.ServerMod", "ServerMod", "1.0.0")]
+    [BepInPlugin("vaffle.ServerMod", "ServerMod", "1.0.0")]
     internal class ServerMod : BaseUnityPlugin
     {
         public void Awake()

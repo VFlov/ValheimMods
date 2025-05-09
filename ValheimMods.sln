@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorfulFlame", "ColorfulFl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleClickPower", "DoubleClickPower\DoubleClickPower.csproj", "{1F820C60-5A2B-4DE8-B8B8-BD38FC5522C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastAndFairTerraforming", "FastAndFairTerraforming\FastAndFairTerraforming.csproj", "{50F9B3A1-625E-498F-99F4-48215DEC5F4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterAntlerPickaxe", "FastAndFairTerraforming\BetterAntlerPickaxe.csproj", "{50F9B3A1-625E-498F-99F4-48215DEC5F4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramePerSecondPlus", "FramePerSecondPlus\FramePerSecondPlus.csproj", "{29E9ACB2-0BB6-4C4E-B615-90240624B221}"
 EndProject

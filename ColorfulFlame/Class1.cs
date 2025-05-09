@@ -11,7 +11,7 @@ using BepInEx.Logging;
 namespace ColorfulFlame
 {
     delegate Color GetterColor();
-    [BepInPlugin("vsp.ColorfulFlame", "ColorfulFlame", "1.0.0")]
+    [BepInPlugin("vaffle.ColorfulFlame", "ColorfulFlame", "1.0.0")]
     public class Class1 : BaseUnityPlugin
     {
         private ConfigEntry<KeyCode> KeyConfig;
@@ -114,13 +114,13 @@ namespace ColorfulFlame
                 Key = KeyConfig.Value,
                 ActiveInCustomGUI = false
             };
-            InputManager.Instance.AddButton("vsp.ColorfulFlame", GuiVisible);
+            InputManager.Instance.AddButton("vaffle.ColorfulFlame", GuiVisible);
             Select = new ButtonConfig
             {
                 Name = "Select",
                 ShortcutConfig = ShortcutConfig
             };
-            InputManager.Instance.AddButton("vsp.ColorfulFlame", Select);
+            InputManager.Instance.AddButton("vaffle.ColorfulFlame", Select);
         }
 
         private void ChooseColor()

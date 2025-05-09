@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UwsynnSnscY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\BigPieces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VFlov\\.nuget\\packages\\ilrepack.lib.msbuild.task\\2.0.40\\ilrepack.lib.msbuild.task.2.0.40.nupkg.sha512"
+  ],
+  "logs": []
+}

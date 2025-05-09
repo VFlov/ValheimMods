@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\BigPieces.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\BigPieces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\BigPieces.csproj",
+        "projectName": "BigPieces",
+        "projectPath": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\BigPieces.csproj",
+        "packagesPath": "C:\\Users\\VFlov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\BigPieces\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\VFlov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "ILRepack.Lib.MSBuild.Task": {
+              "target": "Package",
+              "version": "[2.0.40, )"
+            },
+            "ILRepack.Lib.MSBuild.Task": {
+              "target": "Package",
+              "version": "[2.0.40, )"
+            },
+            "ILRepack.Lib.MSBuild.Task": {
+              "target": "Package",
+              "version": "[2.0.40, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

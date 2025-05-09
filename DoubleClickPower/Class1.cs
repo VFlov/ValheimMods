@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DoubleClickPower
 {
-    [BepInPlugin("vsp.DoubleClickPower", "DoubleClickPower", "1.0.0")]
+    [BepInPlugin("vaffle.DoubleClickPower", "DoubleClickPower", "1.0.0")]
 
     public class Class1 : BaseUnityPlugin
     {

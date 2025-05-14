@@ -13,7 +13,7 @@ using UnityEngine;
 
 namespace WhiteMarble
 {
-    [BepInPlugin("vaffle.WhiteMarble", "WhiteMarble", "1.2.0")]
+    [BepInPlugin("vaffle.WhiteMarble", "WhiteMarble", "1.0.1")]
     public class Class1 : BaseUnityPlugin
     {
         private void Awake()

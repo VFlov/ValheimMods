@@ -10,12 +10,12 @@ using UnityEngine;
 
 namespace BigPieces
 {
-    [BepInPlugin("vaffle.BigPieces", "BigPieces", "1.0.0")]
+    [BepInPlugin("vaffle.BigPieces", "BigPieces", "1.0.1")]
     public class Class1 : BaseUnityPlugin
     {
         private CustomLocalization Localization;
         
-        static readonly ConfigSync configSync = new ConfigSync("vaffle.BigPieces") { DisplayName = "BigPieces", CurrentVersion = "1.0.0", MinimumRequiredVersion = "1.0.0" };
+        static readonly ConfigSync configSync = new ConfigSync("vaffle.BigPieces") { DisplayName = "BigPieces", CurrentVersion = "1.0.1", MinimumRequiredVersion = "1.0.0" };
         ConfigEntry<T> config<T>(string group, string name, T value, ConfigDescription description, bool synchronizedSetting = true)
         {
             ConfigEntry<T> configEntry = Config.Bind(group, name, value, description);
@@ -41,9 +41,7 @@ namespace BigPieces
         private void Awake()
         {
             AddConfiguration();
-            Jotunn.Logger.LogInfo("1");
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam;
-            Jotunn.Logger.LogInfo("2");
             PrefabManager.OnVanillaPrefabsAvailable += WoodPole;
             PrefabManager.OnVanillaPrefabsAvailable += WoodBeam45;
             PrefabManager.OnVanillaPrefabsAvailable += WoodFloor;
@@ -62,9 +60,7 @@ namespace BigPieces
             PrefabManager.OnVanillaPrefabsAvailable += BlackMarbleColumn2;
             PrefabManager.OnVanillaPrefabsAvailable += BlackMarbleColumn3;
             PrefabManager.OnVanillaPrefabsAvailable += CrystalWall;
-            Jotunn.Logger.LogInfo("3");
             AddLocalizations();
-            Jotunn.Logger.LogInfo("4");
         }
         private void WoodBeam()
         {
@@ -233,6 +229,7 @@ namespace BigPieces
         public void StoneFloorNew()
         {
             GameObject gameObject = PrefabManager.Instance.GetPrefab("stone_floor");
+            gameObject.transform.localScale = new Vector3(2, 1, 2);
             PieceConfig pieceConfig = new PieceConfig();
             pieceConfig.Name = "$piece_stone_floor";
             pieceConfig.Description = "$piece_stone_floor_description";
@@ -393,7 +390,7 @@ namespace BigPieces
                 {"piece_big_wood_roof_45_description", "Just a bigger wood roof 45" },
                 {"piece_big_stone_floor_2x2", "Stone floor biggest" },
                 {"piece_big_stone_floor_2x2_description", "Just a bigger stone floor" },
-                {"piece_stone_floor", "Stone floor biggest" },
+                {"piece_stone_floor", "Large blocks stone floor" },
                 {"piece_stone_floor_description", "Just a bigger stone floor" },
                 {"piece_big_stone_stair", "Stone stair biggest" },
                 {"piece_big_stone_stair_description", "Just a bigger stone stair" },
@@ -434,7 +431,7 @@ namespace BigPieces
                 {"piece_big_wood_roof_45_description", "Большая деревянная крыша 45" },
                 {"piece_big_stone_floor_2x2", "Каменный пол" },
                 {"piece_big_stone_floor_2x2_description", "Большой каменный пол" },
-                {"piece_stone_floor", "Каменный пол 2" },
+                {"piece_stone_floor", "Блочный каменный пол" },
                 {"piece_stone_floor_description", "Большой каменный пол 2" },
                 {"piece_big_stone_stair", "Каменные ступеньки" },
                 {"piece_big_stone_stair_description", "Большие каменный ступеньки" },

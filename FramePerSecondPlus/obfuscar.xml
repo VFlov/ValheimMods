@@ -1,0 +1,20 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+	<Var name="InPath" value=".\bin\Release" />
+	<Var name="OutPath" value=".\obfuscated" />
+
+	<!-- Укажите вашу сборку -->
+	<Module file="C:\Users\VFlov\Documents\GitHub\ValheimMods\FramePerSecondPlus\bin\Release\FramePerSecondPlus.dll" />
+
+	<!-- Настройки обфускации -->
+	<Var name="KeepPublicApi" value="false" />
+	<Var name="HidePrivateApi" value="true" />
+	<Var name="RenameProperties" value="true" />
+	<Var name="RenameEvents" value="true" />
+	<Var name="RenameFields" value="true" />
+
+	<!-- Исключения (важно для Harmony и BepInEx) -->
+	<SkipType name="MyPlugin" />
+	<SkipType name="MyPatches.*" />
+	<SkipMethod type="MyPlugin" name=".ctor" />
+</Obfuscator>

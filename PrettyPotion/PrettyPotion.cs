@@ -135,6 +135,8 @@ namespace PrettyPotion
             pinkPotionConfig.Icon = GetIconImage("pink.png");
             CustomItem pinkItem = new CustomItem("PinkPotion", "MeadHealthMedium", pinkPotionConfig);
             pinkItem.ItemDrop.m_itemData.m_shared.m_consumeStatusEffect = pinkPotionCustomEffect.StatusEffect;
+            Utils.SEValue(potion, (effect, value) => effect.m_ttl = value, PotionsPlus.flaskOfElementsTTL); // ЗАЩИТА ТЕПЕРЬ
+            Utils.SEValue(potion, (effect, value) => effect.m_ttl = value, PotionsPlus.flaskOfFortificationTTL);
             Jotunn.Managers.ItemManager.Instance.AddItem(pinkItem);
 
             // 6. Purple Potion
@@ -145,6 +147,7 @@ namespace PrettyPotion
             float numPurple = 5.25f;
             purplePotionEffect.ModifyStaminaRegen(ref numPurple);
             CustomStatusEffect purplePotionCustomEffect = new CustomStatusEffect(purplePotionEffect, fixReference: false);
+
             Jotunn.Managers.ItemManager.Instance.AddStatusEffect(purplePotionCustomEffect);
 
             ItemConfig purplePotionConfig = new ItemConfig();
@@ -156,6 +159,9 @@ namespace PrettyPotion
             purplePotionConfig.Icon = GetIconImage("purple.png");
             CustomItem purpleItem = new CustomItem("PurplePotion", "MeadHealthMedium", purplePotionConfig);
             purpleItem.ItemDrop.m_itemData.m_shared.m_consumeStatusEffect = purplePotionCustomEffect.StatusEffect;
+            Utils.SEValue(potion, (effect, value) => effect.m_ttl = value, PotionsPlus.grandStaminaElixirCooldown);
+            Utils.SEValue(potion, (effect, value) => effect.m_staminaOverTime = value, PotionsPlus.grandStaminaElixirStaminaOverTime);
+            Utils.SEValue(potion, (effect, value) => effect.m_staminaOverTimeDuration = value, PotionsPlus.grandStaminaElixirTTL);
             Jotunn.Managers.ItemManager.Instance.AddItem(purpleItem);
 
             // 7. Red Potion
@@ -194,6 +200,9 @@ namespace PrettyPotion
             yellowPotionConfig.Icon = GetIconImage("yellow.png");
             CustomItem yellowItem = new CustomItem("YellowPotion", "MeadHealthMedium", yellowPotionConfig);
             yellowItem.ItemDrop.m_itemData.m_shared.m_consumeStatusEffect = yellowPotionCustomEffect.StatusEffect;
+            Utils.SEValue(potion, (effect, value) => effect.m_ttl = value, PotionsPlus.flaskOfGodsTTL);
+            Utils.SEValue(potion, (effect, value) => effect.m_healthOverTime = value, PotionsPlus.flaskOfGodsHealing);
+            Utils.SEValue(potion, (effect, value) => effect.m_healthRegenMultiplier = value, PotionsPlus.flaskOfGodsRegenMultiplier);
             Jotunn.Managers.ItemManager.Instance.AddItem(yellowItem);
 
             // Отписываемся от события после завершения настройки
@@ -379,11 +388,11 @@ namespace PrettyPotion
                     }
 
                     __state = true;
-                    Random.InitState((int)__instance.m_nview.m_zdo.m_uid.ID);
-                    Random.State state = Random.state;
+                    UnityEngine.Random.InitState((int)__instance.m_nview.m_zdo.m_uid.ID);
+                    UnityEngine.Random.State state = UnityEngine.Random.state;
                     // Проверяем шанс блокировки снаряда
-                    bool blockIt = Random.value < (smokeScreenChanceToBlock.Value + (smokescreenZDO.GetBool("PotionsPlus SmokeCloud HatBonus") ? warlockHatSmokeScreenBlockIncrease.Value : 0)) / 100f;
-                    Random.state = state;
+                    bool blockIt = UnityEngine.Random.value < (smokeScreenChanceToBlock.Value + (smokescreenZDO.GetBool("PotionsPlus SmokeCloud HatBonus") ? warlockHatSmokeScreenBlockIncrease.Value : 0)) / 100f;
+                    UnityEngine.Random.state = state;
 
                     return blockIt;
                 }

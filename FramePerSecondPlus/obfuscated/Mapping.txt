@@ -1,0 +1,150 @@
+Renamed Types:
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus -> [FramePerSecondPlus]A.A
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::config[4]( [mscorlib]System.String, [mscorlib]System.String, !0, [BepInEx]BepInEx.Configuration.ConfigDescription ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::AddConfiguration[0]( ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::Awake[0]( ) -> a
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::CustomAwake[0]( ) -> B
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::TorchParticles[1]( [UnityEngine.CoreModule]UnityEngine.GameObject ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::OnLogEvent[2]( [mscorlib]System.Object, [BepInEx]BepInEx.Logging.LogEventArgs ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::OnDestroy[0]( ) -> b
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus::.ctor[0]( ) skipped:  special name
+
+	BepInEx.Configuration.ConfigEntry`1<System.Single> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Single> FramePerSecondPlus.FramePerSecondPlus::spawnUpdateInterval -> A
+	BepInEx.Configuration.ConfigEntry`1<System.Boolean> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Boolean> FramePerSecondPlus.FramePerSecondPlus::enableMultithreading -> A
+	BepInEx.Configuration.ConfigEntry`1<System.Single> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Single> FramePerSecondPlus.FramePerSecondPlus::spawnRadiusMin -> a
+	BepInEx.Configuration.ConfigEntry`1<System.Single> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Single> FramePerSecondPlus.FramePerSecondPlus::spawnRadiusMax -> B
+	BepInEx.Configuration.ConfigEntry`1<System.Boolean> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Boolean> FramePerSecondPlus.FramePerSecondPlus::enableLogging -> a
+	BepInEx.Configuration.ConfigEntry`1<System.Single> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Single> FramePerSecondPlus.FramePerSecondPlus::spawnDelay -> b
+	System.Int32 [FramePerSecondPlus]System.Int32 FramePerSecondPlus.FramePerSecondPlus::warningCount -> A
+	System.Int32 [FramePerSecondPlus]System.Int32 FramePerSecondPlus.FramePerSecondPlus::errorCount -> a
+	BepInEx.Logging.ManualLogSource [FramePerSecondPlus]BepInEx.Logging.ManualLogSource FramePerSecondPlus.FramePerSecondPlus::Log -> A
+	System.String[] [FramePerSecondPlus]System.String[] FramePerSecondPlus.FramePerSecondPlus::PrefabLightNames -> A
+	BepInEx.Configuration.ConfigEntry`1<System.Boolean> [FramePerSecondPlus]BepInEx.Configuration.ConfigEntry`1<System.Boolean> FramePerSecondPlus.FramePerSecondPlus::skipIntro -> B
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1 -> [FramePerSecondPlus]A.A/a/A
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.IDisposable.Dispose[0]( ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.Collections.Generic.IEnumerator<System.Object>.get_Current[0]( ) -> a
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.Collections.IEnumerator.Reset[0]( ) -> B
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.Collections.IEnumerator.get_Current[0]( ) -> b
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::.ctor[1]( [mscorlib]System.Int32 ) skipped:  special name
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::MoveNext[0]( ) skipped:  external base class or interface
+
+	System.Int32 [FramePerSecondPlus]System.Int32 FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<>1__state -> A
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<>2__current -> A
+	SceneLoader [FramePerSecondPlus]SceneLoader FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::instance -> A
+	System.String [FramePerSecondPlus]System.String FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<sceneName>5__1 -> A
+	System.Reflection.FieldInfo [FramePerSecondPlus]System.Reflection.FieldInfo FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<sceneField>5__2 -> A
+	SoftReferenceableAssets.SceneManagement.SceneReference [FramePerSecondPlus]SoftReferenceableAssets.SceneManagement.SceneReference FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<scene>5__3 -> A
+	System.Reflection.FieldInfo [FramePerSecondPlus]System.Reflection.FieldInfo FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<loadOperationField>5__4 -> a
+	SoftReferenceableAssets.SceneManagement.ILoadSceneAsyncOperation [FramePerSecondPlus]SoftReferenceableAssets.SceneManagement.ILoadSceneAsyncOperation FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<loadOperation>5__5 -> A
+	System.Reflection.FieldInfo [FramePerSecondPlus]System.Reflection.FieldInfo FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<budgetRequestField>5__6 -> B
+	System.Single [FramePerSecondPlus]System.Single FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::<progress>5__7 -> A
+
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.Collections.Generic.IEnumerator<System.Object>.Current -> dropped
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch/<FastLoadSceneAsync>d__1::System.Collections.IEnumerator.Current -> dropped
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0 -> [FramePerSecondPlus]A.A/b/A
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0::<Prefix>b__0[0]( ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0::.ctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<SpawnSystemList> [FramePerSecondPlus]System.Collections.Generic.List`1<SpawnSystemList> FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0::spawnLists -> A
+	SpawnSystem [FramePerSecondPlus]SpawnSystem FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0::__instance -> A
+	System.DateTime [FramePerSecondPlus]System.DateTime FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch/<>c__DisplayClass0_0::currentTime -> A
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1 -> [FramePerSecondPlus]A.A/C/A
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.IDisposable.Dispose[0]( ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.Collections.Generic.IEnumerator<System.Object>.get_Current[0]( ) -> a
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.Collections.IEnumerator.Reset[0]( ) -> B
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.Collections.IEnumerator.get_Current[0]( ) -> b
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::MoveNext[0]( ) skipped:  external base class or interface
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::.ctor[1]( [mscorlib]System.Int32 ) skipped:  special name
+
+	System.Int32 [FramePerSecondPlus]System.Int32 FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::<>1__state -> A
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::<>2__current -> A
+	SpawnPrefab [FramePerSecondPlus]SpawnPrefab FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::instance -> A
+	System.Single [FramePerSecondPlus]System.Single FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::delay -> A
+
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.Collections.Generic.IEnumerator<System.Object>.Current -> dropped
+	System.Object [FramePerSecondPlus]System.Object FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch/<DelayedSpawn>d__1::System.Collections.IEnumerator.Current -> dropped
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/ClutterSystem_Awake_Patch -> [FramePerSecondPlus]A.A/A
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/ClutterSystem_Awake_Patch::Prefix[1]( [assembly_valheim]ClutterSystem ) -> A
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch -> [FramePerSecondPlus]A.A/a
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch::Prefix[2]( [assembly_valheim]SceneLoader, [mscorlib]System.Collections.IEnumerator& ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch::FastLoadSceneAsync[1]( [assembly_valheim]SceneLoader ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderPatch::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemAwakePatch -> [FramePerSecondPlus]A.A/B
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemAwakePatch::Postfix[1]( [assembly_valheim]SpawnSystem ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemAwakePatch::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch -> [FramePerSecondPlus]A.A/b
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch::Prefix[1]( [assembly_valheim]SpawnSystem ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch::OptimizedUpdateSpawnList[4]( [assembly_valheim]SpawnSystem, [mscorlib]System.Collections.Generic.List`1<[assembly_valheim]SpawnSystem/SpawnData>, [mscorlib]System.DateTime, [mscorlib]System.Boolean ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch::OptimizedFindBaseSpawnPoint[5]( [assembly_valheim]SpawnSystem, [assembly_valheim]SpawnSystem/SpawnData, [FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus, [UnityEngine.CoreModule]UnityEngine.Vector3&, [assembly_valheim]Player& ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnSystemUpdatePatch::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch -> [FramePerSecondPlus]A.A/C
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch::Prefix[1]( [assembly_valheim]SpawnPrefab ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch::DelayedSpawn[2]( [assembly_valheim]SpawnPrefab, [mscorlib]System.Single ) -> A
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch::OptimizedTrySpawn[1]( [assembly_valheim]SpawnPrefab ) -> a
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SpawnPrefabStartPatch::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/LightFlicker_Update_Patch -> [FramePerSecondPlus]A.A/c
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/LightFlicker_Update_Patch::Prefix[1]( [assembly_valheim]LightFlicker ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/LightFlicker_Update_Patch::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderOff -> [FramePerSecondPlus]A.A/D
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderOff::Prefix[1]( [assembly_valheim]SceneLoader ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SceneLoaderOff::.ctor[0]( ) skipped:  special name
+}
+
+[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SlowUpdaterFix -> [FramePerSecondPlus]A.A/d
+{
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SlowUpdaterFix::Prefix[3]( [assembly_valheim]Smoke, [mscorlib]System.Single, [mscorlib]System.Single ) -> A
+
+	[FramePerSecondPlus]FramePerSecondPlus.FramePerSecondPlus/SlowUpdaterFix::.ctor[0]( ) skipped:  special name
+}
+
+Skipped Types:
+
+Renamed Resources:
+
+
+Skipped Resources:
+
+FramePerSecondPlus.resources.attention.png (no clear new name)
+FramePerSecondPlus.resources.error.png (no clear new name)

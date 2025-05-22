@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace BigPieces
 {
-    [BepInPlugin("vaffle.BigPieces", "BigPieces", "1.0.1")]
+    [BepInPlugin("vaffle.BigPieces", "BigPieces", "1.0.4")]
     public class Class1 : BaseUnityPlugin
     {
         private CustomLocalization Localization;

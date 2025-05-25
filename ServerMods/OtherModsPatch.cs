@@ -26,7 +26,7 @@ namespace ServerMods
                 return;
             }
             Quests_DataTypes.Quest quest = Quests_DataTypes.AcceptedQuests[UID];
-            if (quest.Name.Contains("Дом№"))
+            if (quest.Name.Contains("Home№"))
             {
                 ClientSide.RPC_ClientBuyTerritory(quest.Name);
             }

@@ -12,10 +12,10 @@ using UnityEngine;
 using static CharacterDrop;
 using static Chat;
 
-namespace GDMod
+namespace ParadizeServerMod
 {
     // Token: 0x02000002 RID: 2
-    [BepInPlugin("GrayDwarfMod", "GDMod", "2.0.0")]
+    [BepInPlugin("vaffle.ParadizeServerMod", "ParadizeServerMod", "1.0.0")]
     //[BepInDependency("com.jotunn.jotunn", 1)]
     public class Main : BaseUnityPlugin
     {
@@ -47,21 +47,19 @@ namespace GDMod
             //PrefabManager.OnVanillaPrefabsAvailable += CustomArmor;
             //this.ConfigShip();
 
-            Harmony harmony = Main.harmony;
-            if (harmony != null)
-            {
-                harmony.PatchAll();
-            }
+            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
         }
 
         // Token: 0x06000002 RID: 2 RVA: 0x000020E2 File Offset: 0x000002E2
         public void OnDestroy()
         {
+            /*
             Harmony harmony = Main.harmony;
             if (harmony != null)
             {
                 harmony.UnpatchSelf();
             }
+            */
         }
 
         // Token: 0x06000003 RID: 3 RVA: 0x000020F8 File Offset: 0x000002F8
@@ -93,31 +91,31 @@ namespace GDMod
             GameObject gameObject24 = (GameObject)this.items.LoadAsset("questitem_straw_doll");
             CustomItem customItem = new CustomItem(gameObject, false, new ItemConfig
             {
-                Name = "Оселок",
-                Description = "Шероховатый камень, используемый для заточки лезвий"
+                Name = "Touchstone",
+                Description = "A rough stone used for sharpening blades"
             });
             customItem.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem2 = new CustomItem(gameObject2, false, new ItemConfig
             {
-                Name = "Эссенция ветра",
-                Description = "Странно сплоченный и твердый шар ветра, случайные порывы которого обдают вашу руку"
+                Name = "Essence of the wind",
+                Description = "A strangely cohesive and solid ball of wind, the occasional gust of which blows over your hand"
             });
             customItem2.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem2.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem2.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem3 = new CustomItem(gameObject3, false, new ItemConfig
             {
-                Name = "Дыхание призрака",
-                Description = "Разлитое дыхание призрака по бутылкам. Пахнет ужасно"
+                Name = "Ghost's Breath",
+                Description = "Bottled ghost's breath. It smells terrible"
             });
             customItem3.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem3.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem3.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem4 = new CustomItem(gameObject4, false, new ItemConfig
             {
-                Name = "Глаз дракона",
+                Name = "Dragon's Eye",
                 Description = "Глаз дракона, вы все еще можете почувствовать его зловещий блеск"
             });
             customItem4.ItemDrop.m_itemData.m_shared.m_teleportable = false;
@@ -1106,17 +1104,6 @@ namespace GDMod
             }
         }
 
-        // Token: 0x04000001 RID: 1
-        public const string PluginGUID = "GrayDwarfMod";
-
-        // Token: 0x04000002 RID: 2
-        public const string PluginName = "GDMod";
-
-        // Token: 0x04000003 RID: 3
-        public const string PluginVersion = "2.0.0";
-
-        // Token: 0x04000004 RID: 4
-        public static Harmony harmony = new Harmony("GrayDwarfMod");
 
         // Token: 0x04000005 RID: 5
         public AssetBundle items;
@@ -1359,6 +1346,9 @@ namespace GDMod
         }
         private void Economy()
         {
+
+
+
             GameObject prefab = PrefabManager.Instance.GetPrefab("Coins");
             new CustomItem(prefab, false)
             {
@@ -1373,7 +1363,7 @@ namespace GDMod
                         }
                     }
                 }
-            }.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("./resources/gold.png");
+            }.ItemDrop.m_itemData.m_shared.m_icons[0] = GetIconImage("gold.png");
 
             GameObject gameObject = PrefabManager.Instance.CreateClonedPrefab("GDCoin", "Ruby");
             gameObject.GetComponent<Renderer>().material.color = new Color(238, 130, 238);
@@ -1385,7 +1375,7 @@ namespace GDMod
             customItem.ItemDrop.m_itemData.m_shared.m_maxStackSize = 100000;
             customItem.ItemDrop.m_itemData.m_shared.m_weight = 0f;
             customItem.ItemDrop.m_itemData.m_shared.m_value = 10;
-            customItem.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("./resources/crystals.png");
+            customItem.ItemDrop.m_itemData.m_shared.m_icons[0] = GetIconImage("crystals.png");
             ItemManager.Instance.AddItem(customItem);
 
             GameObject gameObject2 = PrefabManager.Instance.CreateClonedPrefab("Wood2", "Wood");
@@ -1554,5 +1544,34 @@ namespace GDMod
             }
         }
         */
+        Sprite GetIconImage(string iconName)
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            // Загружаем поток из внедренного ресурса
+            using (System.IO.Stream stream = assembly.GetManifestResourceStream("ParadizeServerMod.resources." + iconName))
+            {
+
+                if (stream != null)
+                {
+
+                    // Читаем поток в массив байтов
+                    byte[] imageData = new byte[stream.Length];
+                    stream.Read(imageData, 0, (int)stream.Length);
+                    // Создаем Texture2D
+                    Texture2D texture = new Texture2D(2, 2);
+                    texture.LoadImage(imageData); // Автоматически распознает PNG/JPG
+
+                    // Конвертируем Texture2D в Sprite
+                    Sprite sprite = Sprite.Create(
+                        texture,
+                        new Rect(0, 0, texture.width, texture.height),
+                        new Vector2(0.5f, 0.5f) // Центр спрайта
+                    );
+                    Console.Log(sprite);
+                    return sprite;
+                }
+            }
+            return null;
+        }
     }
 }

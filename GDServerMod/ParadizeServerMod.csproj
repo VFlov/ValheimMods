@@ -7,8 +7,8 @@
     <ProjectGuid>{3E37CBC0-51DE-48B0-B08C-D07F9576128A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GDServerMod</RootNamespace>
-    <AssemblyName>GDServerMod</AssemblyName>
+    <RootNamespace>ParadizeServerMod</RootNamespace>
+    <AssemblyName>ParadizeServerMod</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

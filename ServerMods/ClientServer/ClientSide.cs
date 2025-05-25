@@ -43,10 +43,10 @@ namespace ServerMods.ClientServer
                         text += array[j].ToString();
                     }
                     ClientSide.Key = array[2].ToString() + text;
-                    Player.m_localPlayer.Message(MessageHud.MessageType.Center, "Территория №" + array[3].ToString() + " Приобретена", 0, null);
+                    Player.m_localPlayer.Message(MessageHud.MessageType.Center, "Territory №" + array[3].ToString() + " was bought", 0, null);
                     return;
                 }
-                Player.m_localPlayer.Message(MessageHud.MessageType.Center, "Что-то пошло не так. Свяжитесь с администратором", 0, null);
+                Player.m_localPlayer.Message(MessageHud.MessageType.Center, "Something went wrong. Contact the administrator", 0, null);
             }
         }
 

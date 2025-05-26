@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E37CBC0-51DE-48B0-B08C-D07F9576128A}|GDServerMod\\ParadizeServerMod.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\gdservermod\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E37CBC0-51DE-48B0-B08C-D07F9576128A}|GDServerMod\\ParadizeServerMod.csproj|c:\\users\\vflov\\documents\\github\\valheimmods\\gdservermod\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E37CBC0-51DE-48B0-B08C-D07F9576128A}|GDServerMod\\ParadizeServerMod.csproj|solutionrelative:gdservermod\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|c:\\users\\vflov\\documents\\github\\valheimmods\\servermods\\othermodspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\servermods\\tombstonepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|solutionrelative:servermods\\tombstonepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E327C88-7B4A-4569-8BBC-A67AAAD1A422}|Tailwind\\Tailwind.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\tailwind\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E327C88-7B4A-4569-8BBC-A67AAAD1A422}|Tailwind\\Tailwind.csproj|solutionrelative:tailwind\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\servermods\\othermodspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|solutionrelative:servermods\\othermodspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|solutionrelative:servermods\\commandsadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\servermods\\tombstonepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|solutionrelative:servermods\\tombstonepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\servermods\\pinspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5EC1F8B-35A9-4152-B2E7-CD0F872D5F50}|ServerMods\\ServerMod.csproj|solutionrelative:servermods\\pinspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{50C12DB2-218F-4377-B00E-FDEC4FEC80FE}|PrettyPotion\\PrettyPotion.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\prettypotion\\patches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50C12DB2-218F-4377-B00E-FDEC4FEC80FE}|PrettyPotion\\PrettyPotion.csproj|solutionrelative:prettypotion\\patches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E327C88-7B4A-4569-8BBC-A67AAAD1A422}|Tailwind\\Tailwind.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\tailwind\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E327C88-7B4A-4569-8BBC-A67AAAD1A422}|Tailwind\\Tailwind.csproj|solutionrelative:tailwind\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29E9ACB2-0BB6-4C4E-B615-90240624B221}|FramePerSecondPlus\\FramePerSecondPlus.csproj|C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\framepersecondplus\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\Tailwind\\Class1.cs",
               "RelativeDocumentMoniker": "Tailwind\\Class1.cs",
               "ToolTip": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\Tailwind\\Class1.cs",
               "RelativeToolTip": "Tailwind\\Class1.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAuwIwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAC0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T06:12:09.174Z"
             },
@@ -178,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PrettyPotion.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\PrettyPotion\\PrettyPotion.cs",
               "RelativeDocumentMoniker": "PrettyPotion\\PrettyPotion.cs",
@@ -190,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Patches.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\PrettyPotion\\Patches.cs",
               "RelativeDocumentMoniker": "PrettyPotion\\Patches.cs",
@@ -208,14 +208,14 @@
               "RelativeDocumentMoniker": "GDServerMod\\Class1.cs",
               "ToolTip": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\GDServerMod\\Class1.cs",
               "RelativeToolTip": "GDServerMod\\Class1.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAwwHUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAUwNEDAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T18:14:51.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ClientSide.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\ClientServer\\ClientSide.cs",
               "RelativeDocumentMoniker": "ServerMods\\ClientServer\\ClientSide.cs",
@@ -227,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ServerSide.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\ClientServer\\ServerSide.cs",
               "RelativeDocumentMoniker": "ServerMods\\ClientServer\\ServerSide.cs",
@@ -239,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "TombstonePatch.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\TombstonePatch.cs",
               "RelativeDocumentMoniker": "ServerMods\\TombstonePatch.cs",
@@ -251,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SkillsPatch.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\SkillsPatch.cs",
               "RelativeDocumentMoniker": "ServerMods\\SkillsPatch.cs",
@@ -263,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PinsPatch.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\PinsPatch.cs",
               "RelativeDocumentMoniker": "ServerMods\\PinsPatch.cs",
@@ -275,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OtherModsPatch.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\OtherModsPatch.cs",
               "RelativeDocumentMoniker": "ServerMods\\OtherModsPatch.cs",
@@ -283,12 +283,11 @@
               "RelativeToolTip": "ServerMods\\OtherModsPatch.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T16:44:15.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T16:44:15.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Items.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\Items.cs",
               "RelativeDocumentMoniker": "ServerMods\\Items.cs",
@@ -300,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CommandsAdd.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\CommandsAdd.cs",
               "RelativeDocumentMoniker": "ServerMods\\CommandsAdd.cs",
@@ -312,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\VFlov\\Documents\\GitHub\\ValheimMods\\ServerMods\\Class1.cs",
               "RelativeDocumentMoniker": "ServerMods\\Class1.cs",

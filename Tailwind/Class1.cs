@@ -10,6 +10,7 @@ using System.Reflection;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Experimental.Audio;
+using Accessibility;
 
 namespace Tailwind
 {
@@ -36,9 +37,13 @@ namespace Tailwind
         {
             private static void Postfix(Player __instance, IDoodadController shipControl)
             {
+                if (__instance == null)
+                    return;
+                
                 LoadUIPrefab();
                 var ship = Ship.GetLocalShip();
-
+                if (ship == null)
+                    return;
                 var musicPiece = ship.transform.GetComponentsInChildren<Transform>(true)
                     .FirstOrDefault(t => t.name == "InWaterSounds")?
                     .gameObject.transform.GetComponentsInChildren<Transform>(true)
@@ -108,6 +113,12 @@ namespace Tailwind
         {
             private static void Postfix(Player __instance)
             {
+                if (__instance == null)
+                    return;
+                if (uiPanel == null)
+                    return;
+                if (audioSource == null)
+                    return;
                 Destroy(uiPanel);
                 audioSource.Stop();
                 Destroy(audioSource);

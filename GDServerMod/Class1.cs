@@ -22,21 +22,21 @@ namespace ParadizeServerMod
         // Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
         public void Awake()
         {
-           // items = AssetUtils.LoadAssetBundleFromResources("questitems");
+            // items = AssetUtils.LoadAssetBundleFromResources("questitems");
 
-       
-           // fantasy = AssetUtils.LoadAssetBundleFromResources("FantasyArmoury", Assembly.GetExecutingAssembly());
 
-        
-           // henrik = AssetUtils.LoadAssetBundleFromResources("henrikstests", Assembly.GetExecutingAssembly());
+            // fantasy = AssetUtils.LoadAssetBundleFromResources("FantasyArmoury", Assembly.GetExecutingAssembly());
 
-       
-           // magicbow = AssetUtils.LoadAssetBundleFromResources("MagicBows", Assembly.GetExecutingAssembly());
 
-    
-           // eikthyr = AssetUtils.LoadAssetBundleFromResources("eikthyrarmorset", Assembly.GetExecutingAssembly());
+            // henrik = AssetUtils.LoadAssetBundleFromResources("henrikstests", Assembly.GetExecutingAssembly());
 
-     
+
+            // magicbow = AssetUtils.LoadAssetBundleFromResources("MagicBows", Assembly.GetExecutingAssembly());
+
+
+            // eikthyr = AssetUtils.LoadAssetBundleFromResources("eikthyrarmorset", Assembly.GetExecutingAssembly());
+
+
             //platearmor = AssetUtils.LoadAssetBundleFromResources("platearmor", Assembly.GetExecutingAssembly());
             //PrefabManager.OnVanillaPrefabsAvailable += GDItems;
             // PrefabManager.OnVanillaPrefabsAvailable += CustomItems;
@@ -45,7 +45,7 @@ namespace ParadizeServerMod
             PrefabManager.OnVanillaPrefabsAvailable += Economy;
             //PrefabManager.OnVanillaPrefabsAvailable += this.CustomOre;
             //PrefabManager.OnVanillaPrefabsAvailable += CustomArmor;
-            //this.ConfigShip();
+            this.ConfigShip();
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
         }
@@ -116,152 +116,152 @@ namespace ParadizeServerMod
             CustomItem customItem4 = new CustomItem(gameObject4, false, new ItemConfig
             {
                 Name = "Dragon's Eye",
-                Description = "Глаз дракона, вы все еще можете почувствовать его зловещий блеск"
+                Description = "The dragon's eye, you can still feel its sinister gleam"
             });
             customItem4.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem4.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem4.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem5 = new CustomItem(gameObject5, false, new ItemConfig
             {
-                Name = "Свиток в красном переплете",
-                Description = "Свиток папируса, вылинявший и хрупкий"
+                Name = "A red-bound scroll",
+                Description = "A papyrus scroll, faded and fragile"
             });
             CustomItem customItem6 = new CustomItem(gameObject6, false, new ItemConfig
             {
-                Name = "Свиток особой трансмогрификации",
-                Description = "Свиток для трансмогрификации вашей экипировки"
+                Name = "A special transmogrification scroll",
+                Description = "A scroll to transmogrify your equipment"
             });
             customItem6.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("sq1.png");
             CustomItem customItem7 = new CustomItem(gameObject7, false, new ItemConfig
             {
-                Name = "Свиток в желтом переплете",
-                Description = "Свиток папируса, вылинявший и хрупкий"
+                Name = "A yellow-bound scroll",
+                Description = "A papyrus scroll, faded and fragile"
             });
             CustomItem customItem8 = new CustomItem(gameObject8, false, new ItemConfig
             {
-                Name = "Свиток трансмогрификации",
-                Description = "Свиток для трансмогрификации вашей экипировки"
+                Name = "Transmogrification Scroll",
+                Description = "A scroll to transmogrify your equipment"
             });
             customItem8.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("sq2.png");
             CustomItem customItem9 = new CustomItem(gameObject9, false, new ItemConfig
             {
-                Name = "Свиток в синем переплете",
-                Description = "Свиток папируса, вылинявший и хрупкий"
+                Name = "A blue-bound scroll",
+                Description = "A papyrus scroll, faded and fragile"
             });
             CustomItem customItem10 = new CustomItem(gameObject10, false, new ItemConfig
             {
                 Name = "Свиток знаний",
-                Description = "Свиток папируса, наполненный знаниями"
+                Description = "A papyrus scroll filled with knowledge"
             });
             customItem10.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("sq3.png");
             CustomItem customItem11 = new CustomItem(gameObject11, false, new ItemConfig
             {
-                Name = "Зеленое ожерелье с подвеской",
-                Description = "Изысканный кулон, свисающий с золотой и серебряной цепочки"
+                Name = "Green necklace with pendant",
+                Description = "ИAn exquisite pendant hanging from a gold and silver chain"
             });
             customItem11.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem11.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem11.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem12 = new CustomItem(gameObject12, false, new ItemConfig
             {
-                Name = "Красное ожерелье с подвеской",
-                Description = "Простой красный кристалл, свисающий с золотой цепочки"
+                Name = "Red necklace with pendant",
+                Description = "A simple red crystal hanging from a gold chain"
             });
             customItem12.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem12.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem12.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem13 = new CustomItem(gameObject13, false, new ItemConfig
             {
-                Name = "Потускневший горшок",
-                Description = "Потускневший железный горшок"
+                Name = "Tarnished pot",
+                Description = "Tarnished iron pot"
             });
             customItem13.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem13.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem13.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem14 = new CustomItem(gameObject14, false, new ItemConfig
             {
-                Name = "Ледяной шар",
-                Description = "Относительно совершенная ледяная сфера"
+                Name = "Ice Ball",
+                Description = "A relatively perfect ice sphere"
             });
             customItem14.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem14.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem14.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem15 = new CustomItem(gameObject15, false, new ItemConfig
             {
-                Name = "Медный кубок",
-                Description = "Украшенный медный кубок"
+                Name = "Copper Cup",
+                Description = "Decorated copper cup"
             });
             customItem15.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem15.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem15.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem16 = new CustomItem(gameObject16, false, new ItemConfig
             {
-                Name = "Кожаный кошелек для монет",
-                Description = "Простой кожаный кошелек для монет, застегивающийся на кожаные завязки"
+                Name = "Leather Coin Purse",
+                Description = "A simple leather coin purse, fastened with leather ties"
             });
             customItem16.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem16.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem16.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem17 = new CustomItem(gameObject17, false, new ItemConfig
             {
-                Name = "Призрачное сердце",
-                Description = "Холодное пурпурное пламя, которое, кажется, излучает злобу и ненависть"
+                Name = "Ghostly Heart",
+                Description = "A cold purple flame that seems to radiate malice and hatred"
             });
             customItem17.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem17.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem17.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem18 = new CustomItem(gameObject18, false, new ItemConfig
             {
-                Name = "Драконье сердце",
-                Description = "Единственное бьющееся сердце дракона, теперь холодный и безжизненный кусок мяса синего цвета"
+                Name = "Dragon's Heart",
+                Description = "The dragon's only beating heart, now a cold and lifeless piece of blue meat"
             });
             customItem18.ItemDrop.m_itemData.m_shared.m_teleportable = true;
             customItem18.ItemDrop.m_itemData.m_shared.m_maxStackSize = 10000;
             customItem18.ItemDrop.m_itemData.m_shared.m_weight = 0f;
             CustomItem customItem19 = new CustomItem(gameObject19, false, new ItemConfig
             {
-                Name = "Перо грифона",
-                Description = "Шелковистое перо из гривы грифона"
+                Name = "Griffin's Feather",
+                Description = "A silky feather from a griffin's mane"
             });
             customItem19.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem19.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem19.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem20 = new CustomItem(gameObject20, false, new ItemConfig
             {
-                Name = "Потрепанная книга",
-                Description = "Эта книга знавала лучшие времена, ее корешок потрескался, а страницы пожелтели"
+                Name = "A battered book",
+                Description = "This book has seen better days, its spine is cracked, and the pages are yellowed."
             });
             customItem20.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem20.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem20.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem21 = new CustomItem(gameObject21, false, new ItemConfig
             {
-                Name = "Старая книга",
-                Description = "Эта книга старая и потрепанная, она слишком долго пролежала среди стихий. Содержит знания тактик ведения боя"
+                Name = "Old books",
+                Description = "This book is old and battered, it has been lying among the elements for too long. Contains knowledge of combat tactics"
             });
             customItem21.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem21.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem21.ItemDrop.m_itemData.m_shared.m_weight = 1f;
             CustomItem customItem22 = new CustomItem(gameObject22, false, new ItemConfig
             {
-                Name = "Книга древней магии",
-                Description = "Эта книга древняя по любым меркам, обложка потрескалась и сделана из какой-то кожи животного происхождения, а страницы стали хрупкими от старости."
+                Name = "Book of Ancient Magic",
+                Description = "This book is ancient by any measure, the cover is cracked and made of some kind of animal skin, and the pages have become brittle with age."
             });
             customItem22.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem22.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem22.ItemDrop.m_itemData.m_shared.m_weight = 1f;
             CustomItem customItem23 = new CustomItem(gameObject23, false, new ItemConfig
             {
-                Name = "Потрепанная книга тайн",
-                Description = "Эта книга выглядит так, словно кто-то выбросил ее на улицу и оставил там.  Обложка в пятнах и порвана, да и страницы выглядят не лучше."
+                Name = "Tattered Book of Secrets",
+                Description = "This book looks like someone threw it outside and left it there.  The cover is stained and torn, and the pages don't look any better."
             });
             customItem23.ItemDrop.m_itemData.m_shared.m_teleportable = false;
             customItem23.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem23.ItemDrop.m_itemData.m_shared.m_weight = 1f;
             CustomItem customItem24 = new CustomItem(gameObject24, false, new ItemConfig
             {
-                Name = "Соломенная кукла",
-                Description = "Простая кукла, сделанная из соломы и бечевки."
+                Name = "Straw Doll",
+                Description = "A simple doll made of straw and twine."
             });
             ItemManager.Instance.AddItem(customItem);
             ItemManager.Instance.AddItem(customItem2);
@@ -312,68 +312,68 @@ namespace ParadizeServerMod
             GameObject gameObject16 = PrefabManager.Instance.CreateClonedPrefab("PickaxeTerra", "PickaxeAntler");
             CustomItem customItem = new CustomItem(gameObject5, false);
             customItem.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem.ItemDrop.m_itemData.m_shared.m_name = "Товары из Хьяртейка";
-            customItem.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Хьяртейк - места, с богатыми охотничьями угодьями";
+            customItem.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Hjartake";
+            customItem.ItemDrop.m_itemData.m_shared.m_description = "Goods from the city of Hjartake - places with rich hunting grounds";
             customItem.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem2 = new CustomItem(gameObject6, false);
             customItem2.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem2.ItemDrop.m_itemData.m_shared.m_name = "Товары из Блеквуда";
-            customItem2.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Блэквуд - источника бронзы";
+            customItem2.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Blackwood";
+            customItem2.ItemDrop.m_itemData.m_shared.m_description = "Goods from the city of Blackwood, the source of bronze";
             customItem2.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem2.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem3 = new CustomItem(gameObject7, false);
             customItem3.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem3.ItemDrop.m_itemData.m_shared.m_name = "Товары из Ильдби";
-            customItem3.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Ильдби - железо добытое в склепах трудом и потом";
+            customItem3.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Ildbi";
+            customItem3.ItemDrop.m_itemData.m_shared.m_description = "Goods from the city of Ildbi - iron mined in crypts by labor and sweat";
             customItem3.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem3.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem4 = new CustomItem(gameObject8, false);
             customItem4.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem4.ItemDrop.m_itemData.m_shared.m_name = "Товары из Скраннингена";
-            customItem4.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Скранинген - белое золото, что легко поддается обработке";
+            customItem4.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Skranningen";
+            customItem4.ItemDrop.m_itemData.m_shared.m_description = "The goods from the Screening city are white gold, which is easy to process";
             customItem4.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem4.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem5 = new CustomItem(gameObject9, false);
             customItem5.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem5.ItemDrop.m_itemData.m_shared.m_name = "Товары из Йоргенхельда";
-            customItem5.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Йоргенхельд - метал, что чернее ночи. ";
+            customItem5.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Jorgenhold";
+            customItem5.ItemDrop.m_itemData.m_shared.m_description = "Goods from the city of Jorgenhold - metal, which is blacker than the night";
             customItem5.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem5.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem6 = new CustomItem(gameObject10, false);
             customItem6.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem6.ItemDrop.m_itemData.m_shared.m_name = "Товары из Свартгула";
-            customItem6.ItemDrop.m_itemData.m_shared.m_description = "Товары из города Свартгул - это вещество жизни, яд, который поглощает сам себя";
+            customItem6.ItemDrop.m_itemData.m_shared.m_name = "Cargo from Svartgul";
+            customItem6.ItemDrop.m_itemData.m_shared.m_description = "The goods from the city of Svartgul are a substance of life, a poison that absorbs itself";
             customItem6.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem6.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem7 = new CustomItem(gameObject11, false);
             customItem7.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem7.ItemDrop.m_itemData.m_shared.m_name = "Тяжелый сундук";
-            customItem7.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого ящика принадлежат купцу. Крайне тяжелый";
+            customItem7.ItemDrop.m_itemData.m_shared.m_name = "Heavy chest";
+            customItem7.ItemDrop.m_itemData.m_shared.m_description = "The contents of this box belong to the merchant. Extremely heavy";
             customItem7.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem7.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem8 = new CustomItem(gameObject12, false);
             customItem8.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem8.ItemDrop.m_itemData.m_shared.m_name = "Груз свежей рыбы";
-            customItem8.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого товара - свежепойманная, освежеванная рыба";
+            customItem8.ItemDrop.m_itemData.m_shared.m_name = "Cargo of fresh fish";
+            customItem8.ItemDrop.m_itemData.m_shared.m_description = "The contents of this product are freshly caught, skinned fish.";
             customItem8.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem8.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem9 = new CustomItem(gameObject13, false);
             customItem9.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem9.ItemDrop.m_itemData.m_shared.m_name = "Груз многолетней древесины";
-            customItem9.ItemDrop.m_itemData.m_shared.m_description = "Это дерево крайне прочное. Плотники дадут за него отличную цену!";
+            customItem9.ItemDrop.m_itemData.m_shared.m_name = "Cargo of perennial wood";
+            customItem9.ItemDrop.m_itemData.m_shared.m_description = "This tree is extremely durable. The carpenters will give a great price for it!";
             customItem9.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem9.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem10 = new CustomItem(gameObject14, false);
             customItem10.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem10.ItemDrop.m_itemData.m_shared.m_name = "Мешок продуктов";
-            customItem10.ItemDrop.m_itemData.m_shared.m_description = "В мешке местный урожай и продукты. Будьте осторожны - запах привлекает зверей!";
+            customItem10.ItemDrop.m_itemData.m_shared.m_name = "A bag of groceries";
+            customItem10.ItemDrop.m_itemData.m_shared.m_description = "The bag contains local crops and products. Be careful - the smell attracts animals!";
             customItem10.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem10.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem11 = new CustomItem(gameObject15, false);
             customItem11.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem11.ItemDrop.m_itemData.m_shared.m_name = "Тяжелый сундук";
-            customItem11.ItemDrop.m_itemData.m_shared.m_description = "Шкуры редких горных оленей. Согреют даже в самый хлад!";
+            customItem11.ItemDrop.m_itemData.m_shared.m_name = "Heavy chest";
+            customItem11.ItemDrop.m_itemData.m_shared.m_description = "Skins of rare mountain deer. They will keep you warm even in the coldest weather!";
             customItem11.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem11.ItemDrop.m_itemData.m_shared.m_weight = 25f;
 
@@ -382,25 +382,25 @@ namespace ParadizeServerMod
             customItem12.ItemDrop.m_itemData.m_shared.m_icons[0] = AssetUtils.LoadSpriteFromFile("pickaxe.png");
             CustomItem customItem13 = new CustomItem(gameObject, false);
             customItem13.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem13.ItemDrop.m_itemData.m_shared.m_name = "Особый товар из Ильдби";
-            customItem13.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого ящика - предметы, что можно найти только в болотах";
+            customItem13.ItemDrop.m_itemData.m_shared.m_name = "A special product from Ildby";
+            customItem13.ItemDrop.m_itemData.m_shared.m_description = "The contents of this box are items that can only be found in swamps";
             customItem13.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem13.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem14 = new CustomItem(gameObject2, false);
             customItem14.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem14.ItemDrop.m_itemData.m_shared.m_name = "Особый товар из Скраннингена";
-            customItem14.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого ящика - предметы, что можно найти только в горах";
+            customItem14.ItemDrop.m_itemData.m_shared.m_name = "Special product from Skranningen";
+            customItem14.ItemDrop.m_itemData.m_shared.m_description = "The contents of this box are items that can only be found in the mountains.";
             customItem14.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem14.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem15 = new CustomItem(gameObject3, false);
-            customItem15.ItemDrop.m_itemData.m_shared.m_name = "Особый товар из Йоргенхельда";
-            customItem15.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого ящика - предметы, что можно найти только на равнинах";
+            customItem15.ItemDrop.m_itemData.m_shared.m_name = "A special product from Jorgenhold";
+            customItem15.ItemDrop.m_itemData.m_shared.m_description = "The contents of this box are items that can only be found on the plains";
             customItem15.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem15.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             CustomItem customItem16 = new CustomItem(gameObject4, false);
             customItem16.ItemDrop.m_itemData.m_shared.m_teleportable = false;
-            customItem16.ItemDrop.m_itemData.m_shared.m_name = "Особый товар из Свартгула";
-            customItem16.ItemDrop.m_itemData.m_shared.m_description = "Содержимое этого ящика - предметы, что можно найти только в туманных землях";
+            customItem16.ItemDrop.m_itemData.m_shared.m_name = "A special product from Svartgul";
+            customItem16.ItemDrop.m_itemData.m_shared.m_description = "The contents of this box are items that can only be found in the misty lands.";
             customItem16.ItemDrop.m_itemData.m_shared.m_maxStackSize = 1;
             customItem16.ItemDrop.m_itemData.m_shared.m_weight = 25f;
             ItemManager.Instance.AddItem(customItem);
@@ -1223,126 +1223,124 @@ namespace ParadizeServerMod
         [HarmonyPatch(typeof(Container), "Awake")]
         private static class Container_Awake_Patch
         {
-            // Token: 0x0600000C RID: 12 RVA: 0x00005DE4 File Offset: 0x00003FE4
             private static void Postfix(Container __instance, Inventory ___m_inventory)
             {
-                bool flag = ___m_inventory == null;
-                bool flag2 = !flag;
-                if (flag2)
+                if (__instance == null)
+                    return;
+                if (___m_inventory == null)
+                    return;
+
+                Transform parent = __instance.gameObject.transform.parent;
+                Ship ship = (parent != null) ? parent.GetComponent<Ship>() : null;
+                if (ship != null)
                 {
-                    Transform parent = __instance.gameObject.transform.parent;
-                    Ship ship = (parent != null) ? parent.GetComponent<Ship>() : null;
-                    bool flag3 = ship != null;
-                    bool flag4 = flag3;
-                    if (flag4)
+                    bool flag5 = ship.name.ToLower().Contains("karve");
+                    bool flag6 = flag5;
+                    if (flag6)
                     {
-                        bool flag5 = ship.name.ToLower().Contains("karve");
-                        bool flag6 = flag5;
-                        if (flag6)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.karveChestWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.karveChestHeight.Value);
-                        }
-                        bool flag7 = ship.name.ToLower().Contains("vikingship");
-                        bool flag8 = flag7;
-                        if (flag8)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.vikingShipChestWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.vikingShipChestHeight.Value);
-                        }
-                        bool flag9 = ship.name.ToLower().Contains("cargoshipplus");
-                        bool flag10 = flag9;
-                        if (flag10)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargoshipplusWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargoshipplusHeight.Value);
-                        }
-                        bool flag11 = ship.name.ToLower().Contains("mercantship");
-                        bool flag12 = flag11;
-                        if (flag12)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.mercantshipWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.mercantshipHeight.Value);
-                        }
-                        bool flag13 = ship.name.ToLower().Contains("bigcargoshipplus");
-                        bool flag14 = flag13;
-                        if (flag14)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.bigcargoshipplusWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.bigcargoshipplusHeight.Value);
-                        }
-                        bool flag15 = ship.name.ToLower().Contains("skuldelev");
-                        bool flag16 = flag15;
-                        if (flag16)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.skuldelevWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.skuldelevHeight.Value);
-                        }
-                        bool flag17 = ship.name.ToLower().Contains("warship");
-                        bool flag18 = flag17;
-                        if (flag18)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.warshipWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.warshipHeight.Value);
-                        }
-                        bool flag19 = ship.name.ToLower().Contains("herculeship");
-                        bool flag20 = flag19;
-                        if (flag20)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.herculeshipWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.herculeshipHeight.Value);
-                        }
-                        bool flag21 = ship.name.ToLower().Contains("goblinship");
-                        bool flag22 = flag21;
-                        if (flag22)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.goblinshipWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.goblinshipHeight.Value);
-                        }
-                        bool flag23 = ship.name.ToLower().Contains("fastshipskuldelev");
-                        bool flag24 = flag23;
-                        if (flag24)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.fastshipskuldelevWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.fastshipskuldelevHeight.Value);
-                        }
-                        bool flag25 = ship.name.ToLower().Contains("hugecargoship");
-                        bool flag26 = flag25;
-                        if (flag26)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.hugecargoshipWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.hugecargoshipHeight.Value);
-                        }
-                        bool flag27 = ship.name.ToLower().Contains("cargocaravel");
-                        bool flag28 = flag27;
-                        if (flag28)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargocaravelWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargocaravelHeight.Value);
-                        }
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.karveChestWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.karveChestHeight.Value);
                     }
-                    Vagon vagon = (parent != null) ? parent.GetComponent<Vagon>() : null;
-                    bool flag29 = vagon != null;
-                    bool flag30 = flag29;
-                    if (flag30)
+                    bool flag7 = ship.name.ToLower().Contains("vikingship");
+                    bool flag8 = flag7;
+                    if (flag8)
                     {
-                        bool flag31 = vagon.name.ToLower().Contains("cart");
-                        bool flag32 = flag31;
-                        if (flag32)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.wagonWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.wagonHeight.Value);
-                        }
-                        bool flag33 = vagon.name.ToLower().Contains("rae_horsecart");
-                        bool flag34 = flag33;
-                        if (flag34)
-                        {
-                            typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.rae_horsecartWidth.Value);
-                            typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.rae_horsecartHeight.Value);
-                        }
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.vikingShipChestWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.vikingShipChestHeight.Value);
+                    }
+                    bool flag9 = ship.name.ToLower().Contains("cargoshipplus");
+                    bool flag10 = flag9;
+                    if (flag10)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargoshipplusWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargoshipplusHeight.Value);
+                    }
+                    bool flag11 = ship.name.ToLower().Contains("mercantship");
+                    bool flag12 = flag11;
+                    if (flag12)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.mercantshipWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.mercantshipHeight.Value);
+                    }
+                    bool flag13 = ship.name.ToLower().Contains("bigcargoshipplus");
+                    bool flag14 = flag13;
+                    if (flag14)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.bigcargoshipplusWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.bigcargoshipplusHeight.Value);
+                    }
+                    bool flag15 = ship.name.ToLower().Contains("skuldelev");
+                    bool flag16 = flag15;
+                    if (flag16)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.skuldelevWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.skuldelevHeight.Value);
+                    }
+                    bool flag17 = ship.name.ToLower().Contains("warship");
+                    bool flag18 = flag17;
+                    if (flag18)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.warshipWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.warshipHeight.Value);
+                    }
+                    bool flag19 = ship.name.ToLower().Contains("herculeship");
+                    bool flag20 = flag19;
+                    if (flag20)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.herculeshipWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.herculeshipHeight.Value);
+                    }
+                    bool flag21 = ship.name.ToLower().Contains("goblinship");
+                    bool flag22 = flag21;
+                    if (flag22)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.goblinshipWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.goblinshipHeight.Value);
+                    }
+                    bool flag23 = ship.name.ToLower().Contains("fastshipskuldelev");
+                    bool flag24 = flag23;
+                    if (flag24)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.fastshipskuldelevWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.fastshipskuldelevHeight.Value);
+                    }
+                    bool flag25 = ship.name.ToLower().Contains("hugecargoship");
+                    bool flag26 = flag25;
+                    if (flag26)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.hugecargoshipWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.hugecargoshipHeight.Value);
+                    }
+                    bool flag27 = ship.name.ToLower().Contains("cargocaravel");
+                    bool flag28 = flag27;
+                    if (flag28)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargocaravelWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.cargocaravelHeight.Value);
+                    }
+                }
+                Vagon vagon = (parent != null) ? parent.GetComponent<Vagon>() : null;
+                bool flag29 = vagon != null;
+                bool flag30 = flag29;
+                if (flag30)
+                {
+                    bool flag31 = vagon.name.ToLower().Contains("cart");
+                    bool flag32 = flag31;
+                    if (flag32)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.wagonWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.wagonHeight.Value);
+                    }
+                    bool flag33 = vagon.name.ToLower().Contains("rae_horsecart");
+                    bool flag34 = flag33;
+                    if (flag34)
+                    {
+                        typeof(Inventory).GetField("m_width", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.rae_horsecartWidth.Value);
+                        typeof(Inventory).GetField("m_height", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(___m_inventory, Main.rae_horsecartHeight.Value);
                     }
                 }
             }
+
         }
         private void Economy()
         {
@@ -1369,8 +1367,8 @@ namespace ParadizeServerMod
             gameObject.GetComponent<Renderer>().material.color = new Color(238, 130, 238);
             CustomItem customItem = new CustomItem(gameObject, false, new ItemConfig
             {
-                Name = "Роскошь",
-                Description = "Викингам известна роскошь. Любой торговец отдаст любые сбережения, чтобы заполучить её."
+                Name = "Luxury",
+                Description = "Vikings know luxury. Any merchant would give up any savings to get it."
             });
             customItem.ItemDrop.m_itemData.m_shared.m_maxStackSize = 100000;
             customItem.ItemDrop.m_itemData.m_shared.m_weight = 0f;
@@ -1381,8 +1379,8 @@ namespace ParadizeServerMod
             GameObject gameObject2 = PrefabManager.Instance.CreateClonedPrefab("Wood2", "Wood");
             CustomItem customItem2 = new CustomItem(gameObject2, false, new ItemConfig
             {
-                Name = "Береста",
-                Description = "Кора дерева, что вы содрали"
+                Name = "Birch bark",
+                Description = "The bark of the tree that you tore off"
             });
             customItem2.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem2.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1400,8 +1398,8 @@ namespace ParadizeServerMod
             GameObject gameObject3 = PrefabManager.Instance.CreateClonedPrefab("Wood3", "Wood");
             CustomItem customItem3 = new CustomItem(gameObject3, false, new ItemConfig
             {
-                Name = "Опилки",
-                Description = "Мягая на ощупь стужка. Вы измельчили древесную кору."
+                Name = "Sawdust",
+                Description = "The chips are soft to the touch. You have crushed the tree bark."
             });
             customItem3.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem3.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1419,8 +1417,8 @@ namespace ParadizeServerMod
             GameObject gameObject4 = PrefabManager.Instance.CreateClonedPrefab("Wood4", "Wood");
             CustomItem customItem4 = new CustomItem(gameObject4, false, new ItemConfig
             {
-                Name = "Грубый лист",
-                Description = "Лист, что вы получили путем высушивания и сдавливания опилок"
+                Name = "Rough Sheet",
+                Description = "The sheet that you got by drying and squeezing the sawdust"
             });
             customItem4.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem4.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1438,8 +1436,8 @@ namespace ParadizeServerMod
             GameObject gameObject5 = PrefabManager.Instance.CreateClonedPrefab("Wood5", "Wood");
             CustomItem customItem5 = new CustomItem(gameObject5, false, new ItemConfig
             {
-                Name = "Свитки",
-                Description = "Путем длительной древообработки вы получили прочный рулон гладкого материала. Думаю за него предложат хорошую цену"
+                Name = "The Scrolls",
+                Description = "Through long-term woodworking, you have obtained a durable roll of smooth material. I think they'll offer a good price for it."
             });
             customItem5.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem5.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1459,8 +1457,8 @@ namespace ParadizeServerMod
             GameObject gameObject6 = PrefabManager.Instance.CreateClonedPrefab("Stone2", "Stone");
             CustomItem customItem6 = new CustomItem(gameObject6, false, new ItemConfig
             {
-                Name = "Разбитый камень",
-                Description = "Лишь попытка найти что-то действительно ценное"
+                Name = "Broken Stone",
+                Description = "Just trying to find something really valuable"
             });
             customItem6.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem6.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1478,8 +1476,8 @@ namespace ParadizeServerMod
             GameObject gameObject7 = PrefabManager.Instance.CreateClonedPrefab("Stone3", "Stone");
             CustomItem customItem7 = new CustomItem(gameObject7, false, new ItemConfig
             {
-                Name = "Гранированный камень",
-                Description = "Камень очищенный от ненужных примесей"
+                Name = "Engraved stone",
+                Description = "A stone cleaned of unnecessary impurities"
             });
             customItem7.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem7.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1497,8 +1495,8 @@ namespace ParadizeServerMod
             GameObject gameObject8 = PrefabManager.Instance.CreateClonedPrefab("Stone4", "Stone");
             CustomItem customItem8 = new CustomItem(gameObject8, false, new ItemConfig
             {
-                Name = "Безделушка",
-                Description = "Этот кусок слегка поблескивает. Может придать ему форму?"
+                Name = "A trinket",
+                Description = "This piece is slightly shiny. Can I shape it?"
             });
             customItem8.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem8.ItemDrop.m_itemData.m_shared.m_weight = 1f;
@@ -1515,8 +1513,8 @@ namespace ParadizeServerMod
             GameObject gameObject9 = PrefabManager.Instance.CreateClonedPrefab("Stone5", "Stone");
             CustomItem customItem9 = new CustomItem(gameObject9, false, new ItemConfig
             {
-                Name = "Драгоценный камень",
-                Description = "Отполированная и очищенная руда превратилась в нечто прекрасное"
+                Name = "A precious stone",
+                Description = "The polished and refined ore turned into something beautiful."
             });
             customItem9.ItemDrop.m_itemData.m_shared.m_maxStackSize = 50;
             customItem9.ItemDrop.m_itemData.m_shared.m_weight = 1f;
